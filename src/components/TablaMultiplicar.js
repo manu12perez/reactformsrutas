@@ -41,7 +41,9 @@ export default class TablaMultiplicar extends Component {
           <tbody>
             {this.state.multiplicacion.map((resultado, index) => (
               <tr key={index}>
-                <td>{this.cajaNumero.current.value} * {index + 1}</td>
+                <td>
+                  {this.cajaNumero.current.value} * {index + 1}
+                </td>
                 <td>{resultado}</td>
               </tr>
             ))}
