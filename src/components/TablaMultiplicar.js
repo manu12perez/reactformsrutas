@@ -93,7 +93,7 @@ export default class TablaMultiplicar extends Component {
   render() {
     return (
       <div>
-        <h1>TablaMultiplicar</h1>
+        <h1>Tabla de Multiplicar</h1>
 
         <form>
           <label>Introduzca número</label>
