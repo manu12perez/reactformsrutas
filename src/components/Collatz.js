@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 
 export default class Collatz extends Component {
+  //NECESITAMOS UN OBJETO CAJAJA PARA RECUPERAR EL DATO
   cajaNumero = React.createRef();
 
   state = {
     secuencia: [],
   }
 
-  peticionForm = (e) => {
+  mostrarCollatz = (e) => {
     e.preventDefault();
     console.log("Petición lista");
     let numero = parseInt(this.cajaNumero.current.value);
@@ -20,7 +21,6 @@ export default class Collatz extends Component {
 
     // Limpiar la secuencia antes de calcular
     const nuevaSecuencia = [];
-
 
     while(true){
         nuevaSecuencia.push(numero);
@@ -42,7 +42,8 @@ export default class Collatz extends Component {
     return (
       <div>
         <h1>Método Collatz</h1>
-        <form onSubmit={this.peticionForm}>
+        <form onSubmit={this.mostrarCollatz}>
+          <label>Introduzca un número</label>
           <input type="text" ref={this.cajaNumero} placeholder="Introduce un número" />
           <button>Calcular</button>
         </form>
